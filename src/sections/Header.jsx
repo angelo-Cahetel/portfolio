@@ -4,7 +4,6 @@ import "../index.css";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { useEffect } from "react";
-import baixarCV from "../components/downloadCV.jsx";
 
 function Header() {
   gsap.registerPlugin(SplitText);
@@ -64,13 +63,6 @@ function Header() {
               <ul className="text-[16px] lg:text-2xl text-royalBlue  hover:underline transition-all">
                 <a className="cursor-pointer font-satoshi" href="#contact">
                   <span class="text">Contact</span>
-                </a>
-              </ul>
-              <ul className="text-[16px] lg:text-2xl text-royalBlue  hover:underline transition-all">
-                <a className="cursor-pointer font-satoshi">
-                  <button onClick={baixarCV}>
-                    <span class="text">Download resume</span>
-                  </button>
                 </a>
               </ul>
             </div>

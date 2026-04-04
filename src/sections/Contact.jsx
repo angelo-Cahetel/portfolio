@@ -1,6 +1,9 @@
 import GitHub from "../assets/img/GitHub.svg";
 import LinkedIn from "../assets/img/LinkedIn.svg";
 import Instagram from "../assets/img/Instagram.svg";
+import CallToAction from "../assets/img/call-to-action.svg";
+import Globe from "../assets/img/globicon.png";
+import baixarCV from "../components/downloadCV.jsx";
 
 const handleSendEmail = () => {
   window.location.href =
@@ -50,6 +53,12 @@ function Contact() {
                   <img className="w-7 h-7" src={Instagram} alt="" />
                 </a>
               </div>
+            </div>
+            <div className="absolute bottom-6 right-6 flex flex-col items-end gap-3">
+              <img className="mr-40 translate-y-25" src={CallToAction} alt="" />
+              <button type="button" onClick={baixarCV}>
+                <img src={Globe} alt="" />
+              </button>
             </div>
           </div>
         </div>
