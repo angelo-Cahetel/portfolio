@@ -1,6 +1,10 @@
+import { useState } from "react";
 import GitHub from "../assets/img/GitHub.svg";
 import LinkedIn from "../assets/img/LinkedIn.svg";
 import Instagram from "../assets/img/Instagram.svg";
+import CallToAction from "../assets/img/call-to-action.svg";
+import Globe from "../assets/img/globicon.png";
+import baixarCV from "../components/downloadCV.jsx";
 
 const handleSendEmail = () => {
   window.location.href =
@@ -8,11 +12,33 @@ const handleSendEmail = () => {
 };
 
 function Contact() {
+  const [globeTransform, setGlobeTransform] = useState(
+    "perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)",
+  );
+
+  const handleGlobeMove = (event) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    const rotateX = (y / rect.height - 0.5) * -22;
+    const rotateY = (x / rect.width - 0.5) * 22;
+
+    setGlobeTransform(
+      `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`,
+    );
+  };
+
+  const resetGlobeTransform = () => {
+    setGlobeTransform(
+      "perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)",
+    );
+  };
+
   return (
     <>
       <footer id="contact">
         <div className="flex w-[full] min-h-screen p-6 sticky">
-          <div className="flex justify-center bg-white rounded-2xl w-full p-20">
+          <div className="relative flex justify-center bg-white rounded-2xl w-full p-20">
             <div className="flex flex-col justify-center">
               <div className="m-48 lg:m-50 gap-2.5">
                 <div className="flex flex-col justify-center items-center gap-3.5 lg:gap-0">
@@ -50,6 +76,27 @@ function Contact() {
                   <img className="w-7 h-7" src={Instagram} alt="" />
                 </a>
               </div>
+            </div>
+            <div className="absolute bottom-6 right-6 flex flex-col items-end gap-3">
+              <img className="mr-40 translate-y-25" src={CallToAction} alt="" />
+              <button
+                type="button"
+                onClick={baixarCV}
+                onMouseMove={handleGlobeMove}
+                onMouseLeave={resetGlobeTransform}
+                className="cursor-pointer"
+                style={{ perspective: "1000px" }}
+              >
+                <img
+                  src={Globe}
+                  alt=""
+                  className="transition-transform duration-200 ease-out will-change-transform"
+                  style={{
+                    transform: globeTransform,
+                    transformStyle: "preserve-3d",
+                  }}
+                />
+              </button>
             </div>
           </div>
         </div>
