@@ -37,23 +37,23 @@ function Contact() {
   return (
     <>
       <footer id="contact">
-        <div className="flex w-[full] min-h-screen p-6 sticky">
-          <div className="relative flex justify-center bg-white rounded-2xl w-full p-20">
+        <div className="sticky flex min-h-screen w-full p-3 sm:p-4 lg:p-6">
+          <div className="relative flex w-full justify-center rounded-2xl bg-white px-4 py-10 sm:px-8 sm:py-14 lg:p-20">
             <div className="flex flex-col justify-center">
-              <div className="m-48 lg:m-50 gap-2.5">
-                <div className="flex flex-col justify-center items-center gap-3.5 lg:gap-0">
-                  <h1 className="text-royalBlue  text-6xl lg:text-9xl font-medium font-instrument italic whitespace-nowrap">
+              <div className="mx-auto my-12 sm:my-16 lg:m-48">
+                <div className="flex flex-col items-center justify-center gap-3.5 lg:gap-0">
+                  <h1 className="text-royalBlue text-center text-4xl leading-none sm:text-6xl lg:text-9xl font-medium font-instrument italic lg:whitespace-nowrap">
                     Let's talk!
                   </h1>
                   <button
                     onClick={handleSendEmail}
-                    className="p-2 lg:px-7 lg:py-2.5 bg-royalBlue  hover:text-royalBlue  hover:bg-white hover:outline-2 hover:outline-royalBlue  rounded-[20px] text-white lg:text-3xl text-xl cursor-pointer font-satoshi"
+                    className="bg-royalBlue cursor-pointer rounded-[20px] px-4 py-2 text-base text-white hover:bg-white hover:text-royalBlue hover:outline-2 hover:outline-royalBlue sm:text-xl lg:px-7 lg:py-2.5 lg:text-3xl font-satoshi"
                   >
                     Get in touch
                   </button>
                 </div>
               </div>
-              <div className="flex justify-center items-center space-x-4">
+              <div className="flex items-center justify-center space-x-4">
                 <a
                   className="cursor-pointer"
                   href="https://github.com/angelo-Cahetel"
@@ -77,8 +77,12 @@ function Contact() {
                 </a>
               </div>
             </div>
-            <div className="absolute bottom-6 right-6 flex flex-col items-end gap-3">
-              <img className="mr-40 translate-y-25" src={CallToAction} alt="" />
+            <div className="absolute bottom-4 right-4 flex flex-col items-end gap-2 sm:bottom-6 sm:right-6 sm:gap-3">
+              <img
+                className="mr-0 w-24 translate-y-8 sm:mr-10 sm:w-28 sm:translate-y-12 lg:mr-40 lg:w-auto lg:translate-y-25"
+                src={CallToAction}
+                alt=""
+              />
               <button
                 type="button"
                 onClick={baixarCV}
@@ -90,7 +94,7 @@ function Contact() {
                 <img
                   src={Globe}
                   alt=""
-                  className="transition-transform duration-200 ease-out will-change-transform"
+                  className="w-16 transition-transform duration-200 ease-out will-change-transform sm:w-20 lg:w-auto"
                   style={{
                     transform: globeTransform,
                     transformStyle: "preserve-3d",
