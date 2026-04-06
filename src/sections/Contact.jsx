@@ -79,7 +79,7 @@ function Contact() {
             </div>
             <div className="absolute bottom-4 right-4 flex flex-col items-end gap-2 sm:bottom-6 sm:right-6 sm:gap-3">
               <img
-                className="mr-0 w-24 translate-y-8 sm:mr-10 sm:w-28 sm:translate-y-12 lg:mr-40 lg:w-auto lg:translate-y-25"
+                className="mr-25 w-35 translate-y-8 sm:mr-10 sm:w-28 sm:translate-y-12 lg:mr-40 lg:w-auto lg:translate-y-25"
                 src={CallToAction}
                 alt=""
               />
@@ -94,7 +94,7 @@ function Contact() {
                 <img
                   src={Globe}
                   alt=""
-                  className="w-16 transition-transform duration-200 ease-out will-change-transform sm:w-20 lg:w-auto"
+                  className="w-45 transition-transform duration-200 ease-out will-change-transform sm:w-20 lg:w-auto"
                   style={{
                     transform: globeTransform,
                     transformStyle: "preserve-3d",
