@@ -40,8 +40,8 @@ function Contact() {
         <div className="sticky flex min-h-screen w-full p-3 sm:p-4 lg:p-6">
           <div className="relative flex w-full justify-center rounded-2xl bg-white px-4 py-10 sm:px-8 sm:py-14 lg:p-20">
             <div className="flex flex-col justify-center">
-              <div className="mx-auto my-12 sm:my-16 lg:m-48">
-                <div className="flex flex-col items-center justify-center gap-3.5 lg:gap-2">
+              <div className="mx-auto my-5 sm:my-16 lg:m-48">
+                <div className="flex flex-col items-center justify-center gap-2 lg:gap-3.5">
                   <h1 className="text-royalBlue text-center leading-none text-5xl lg:text-9xl font-medium font-instrument italic">
                     Let's talk!
                   </h1>
