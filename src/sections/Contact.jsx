@@ -40,9 +40,9 @@ function Contact() {
         <div className="sticky flex min-h-screen w-full p-3 sm:p-4 lg:p-6">
           <div className="relative flex w-full justify-center rounded-2xl bg-white px-4 py-10 sm:px-8 sm:py-14 lg:p-20">
             <div className="flex flex-col justify-center">
-              <div className="mx-auto my-12 sm:my-16 lg:m-48">
-                <div className="flex flex-col items-center justify-center gap-3.5 lg:gap-0">
-                  <h1 className="text-royalBlue text-center text-4xl leading-none sm:text-6xl lg:text-9xl font-medium font-instrument italic lg:whitespace-nowrap">
+              <div className="mx-auto my-5 sm:my-16 lg:m-48">
+                <div className="flex flex-col items-center justify-center gap-2 lg:gap-3.5">
+                  <h1 className="text-royalBlue text-center leading-none text-5xl lg:text-9xl font-medium font-instrument italic">
                     Let's talk!
                   </h1>
                   <button
@@ -79,7 +79,7 @@ function Contact() {
             </div>
             <div className="absolute bottom-4 right-4 flex flex-col items-end gap-2 sm:bottom-6 sm:right-6 sm:gap-3">
               <img
-                className="mr-0 w-24 translate-y-8 sm:mr-10 sm:w-28 sm:translate-y-12 lg:mr-40 lg:w-auto lg:translate-y-25"
+                className="mr-25 w-35 translate-y-8 sm:mr-10 sm:w-28 sm:translate-y-12 lg:mr-40 lg:w-auto lg:translate-y-25"
                 src={CallToAction}
                 alt=""
               />
@@ -94,7 +94,7 @@ function Contact() {
                 <img
                   src={Globe}
                   alt=""
-                  className="w-16 transition-transform duration-200 ease-out will-change-transform sm:w-20 lg:w-auto"
+                  className="w-45 transition-transform duration-200 ease-out will-change-transform sm:w-20 lg:w-auto"
                   style={{
                     transform: globeTransform,
                     transformStyle: "preserve-3d",
