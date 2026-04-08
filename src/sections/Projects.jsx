@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import { PROJECTS } from "../constants";
 import ProjectCard from "../components/ProjectCard";
 
@@ -65,16 +66,19 @@ function Projects() {
           </ul>
         </div>
 
-        {hoveredProject ? (
-          <div
-            className="hidden lg:block fixed z-50 pointer-events-none"
-            style={{ left: mousePosition.x, top: mousePosition.y }}
-          >
-            <div className="w-90">
-              <ProjectCard {...hoveredProject} />
-            </div>
-          </div>
-        ) : null}
+        {hoveredProject
+          ? createPortal(
+              <div
+                className="hidden lg:block fixed z-50 pointer-events-none"
+                style={{ left: mousePosition.x, top: mousePosition.y }}
+              >
+                <div className="w-90">
+                  <ProjectCard {...hoveredProject} />
+                </div>
+              </div>,
+              document.body,
+            )
+          : null}
       </div>
     </section>
   );
