@@ -2,11 +2,28 @@ import React from "react";
 import openToWork from "../assets/img/openToWork.svg";
 import "../index.css";
 import gsap from "gsap";
+import ScrollSmoother from "gsap/ScrollSmoother";
 import { SplitText } from "gsap/SplitText";
 import { useEffect } from "react";
 
 function Header() {
   gsap.registerPlugin(SplitText);
+
+  const handleNavigate = (target) => () => {
+    const smoother = ScrollSmoother.get();
+
+    if (smoother) {
+      smoother.scrollTo(target, true, "top top");
+      return;
+    }
+
+    if (target === 0) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    document.querySelector(target)?.scrollIntoView({ behavior: "smooth" });
+  };
 
   let split = SplitText.create(".text", {
     type: "words, lines",
@@ -51,30 +68,46 @@ function Header() {
           <div className="flex justify-between items-end">
             <div className="lg:flex gap-7">
               <ul className="text-[16px] lg:text-2xl text-royalBlue  hover:underline transition-all">
-                <a className="cursor-pointer font-satoshi" href="#about">
+                <button
+                  type="button"
+                  onClick={handleNavigate("#about")}
+                  className="cursor-pointer font-satoshi"
+                >
                   <span class="text">About</span>
-                </a>
+                </button>
               </ul>
               <ul className="text-[16px] lg:text-2xl text-royalBlue  hover:underline transition-all">
-                <a className="cursor-pointer font-satoshi" href="#projects">
+                <button
+                  type="button"
+                  onClick={handleNavigate("#projects")}
+                  className="cursor-pointer font-satoshi"
+                >
                   <span class="text">Projects</span>
-                </a>
+                </button>
               </ul>
               <ul className="text-[16px] lg:text-2xl text-royalBlue  hover:underline transition-all">
-                <a className="cursor-pointer font-satoshi" href="#contact">
+                <button
+                  type="button"
+                  onClick={handleNavigate("#contact")}
+                  className="cursor-pointer font-satoshi"
+                >
                   <span class="text">Contact</span>
-                </a>
+                </button>
               </ul>
             </div>
 
-            <div>
+            <button
+              type="button"
+              onClick={handleNavigate(0)}
+              className="text-left cursor-pointer"
+            >
               <h1 className="text-royalBlue  text-4xl lg:text-8xl uppercase font-medium font-instrument italic">
                 <span class="text">Angelo</span>
               </h1>
               <h1 className="text-royalBlue  text-4xl lg:text-8xl uppercase font-medium font-instrument italic">
                 <span class="text">Mendes</span>
               </h1>
-            </div>
+            </button>
           </div>
         </div>
       </div>
