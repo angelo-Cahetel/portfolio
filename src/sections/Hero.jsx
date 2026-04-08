@@ -6,10 +6,7 @@ function Hero() {
   return (
     <>
       <div id="about" className="flex w-full min-h-screen p-6 sticky">
-        <div
-          id="smooth-content"
-          className="bg-white rounded-2xl flex flex-col w-full p-20"
-        >
+        <div className="bg-white rounded-2xl flex flex-col w-full p-20">
           <div className="justify-end">
             <div>
               <h1 className="text-royalBlue  text-4xl lg:text-8xl font-instrument italic font-medium">
