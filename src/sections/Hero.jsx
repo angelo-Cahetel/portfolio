@@ -6,29 +6,29 @@ function Hero() {
   return (
     <>
       <div id="about" className="flex w-full min-h-screen p-6 sticky">
-        <div className="bg-white rounded-2xl flex flex-col w-full p-20">
+        <div className="bg-white rounded-2xl flex flex-col w-full px-8 py-6 lg:p-20">
           <div className="justify-end">
-            <div>
+            <div className="lg:pb-8">
               <h1 className="text-royalBlue  text-4xl lg:text-8xl font-instrument italic font-medium">
                 {HERO_CONTENT.greeting}
               </h1>
             </div>
 
-            <div className="flex justify-end">
+            <div className="flex lg:justify-end pt-5 lg:pt-0">
               <h2 className="text-royalBlue  text-2xl lg:text-5xl font-instrument italic font-medium">
                 {HERO_CONTENT.title}
               </h2>
             </div>
 
             <div className="flex justify-end">
-              <p className="w-full lg:w-137.25 text-end pt-2.5 font-satoshi">
+              <p className="w-full lg:w-137.25 lg:text-end lg:pt-2.5 font-satoshi">
                 {HERO_CONTENT.description}
               </p>
             </div>
 
             <div className="flex justify-between gap-28">
               <div>
-                <h2 className="text-royalBlue  text-2xl lg:text-5xl font-instrument italic font-medium">
+                <h2 className="pt-5 lg:pt-0 text-royalBlue text-2xl lg:text-5xl font-instrument italic font-medium">
                   Skills
                 </h2>
                 <div className="pt-2.5">
