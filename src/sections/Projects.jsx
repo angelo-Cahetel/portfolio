@@ -32,7 +32,7 @@ function Projects() {
       id="projects"
       className="flex w-full min-h-screen p-3 md:p-6 sticky"
     >
-      <div className="bg-white rounded-2xl flex flex-col w-full p-6 md:p-12 lg:p-20">
+      <div className="bg-white rounded-2xl flex flex-col w-full px-8 py-6  lg:p-20">
         <div className="justify-center">
           <h1 className="text-royalBlue text-end text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium font-instrument italic">
             Projects
@@ -68,16 +68,16 @@ function Projects() {
 
         {hoveredProject
           ? createPortal(
-              <div
-                className="hidden lg:block fixed z-50 pointer-events-none"
-                style={{ left: mousePosition.x, top: mousePosition.y }}
-              >
-                <div className="w-90">
-                  <ProjectCard {...hoveredProject} />
-                </div>
-              </div>,
-              document.body,
-            )
+            <div
+              className="hidden lg:block fixed z-50 pointer-events-none"
+              style={{ left: mousePosition.x, top: mousePosition.y }}
+            >
+              <div className="w-90">
+                <ProjectCard {...hoveredProject} />
+              </div>
+            </div>,
+            document.body,
+          )
           : null}
       </div>
     </section>
