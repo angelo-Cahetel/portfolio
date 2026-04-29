@@ -37,8 +37,8 @@ function Contact() {
   return (
     <>
       <footer id="contact">
-        <div className="sticky flex min-h-screen w-full p-3 sm:p-4 lg:p-6">
-          <div className="relative flex w-full justify-center rounded-2xl bg-white px-4 py-10 sm:px-8 sm:py-14 lg:p-20">
+        <div className="sticky flex min-h-screen w-full p-6">
+          <div className="relative flex w-full justify-center rounded-2xl bg-white px-8 py-6 lg:p-20">
             <div className="flex flex-col justify-center">
               <div className="mx-auto my-5 sm:my-16 lg:m-48">
                 <div className="flex flex-col items-center justify-center gap-2 lg:gap-3.5">

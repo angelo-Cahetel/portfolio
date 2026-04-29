@@ -28,10 +28,7 @@ function Projects() {
   };
 
   return (
-    <section
-      id="projects"
-      className="flex w-full min-h-screen p-3 md:p-6 sticky"
-    >
+    <section id="projects" className="flex w-full min-h-screen p-6 sticky">
       <div className="bg-white rounded-2xl flex flex-col w-full px-8 py-6  lg:p-20">
         <div className="justify-center">
           <h1 className="text-royalBlue text-end text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium font-instrument italic">
@@ -54,7 +51,7 @@ function Projects() {
                       "noonpener,noreferrer",
                     )
                   }
-                  className={`w-full text-left text-3xl md:text-5xl lg:text-8xl font-instrument italic transition-colors transition-discrete duration-300 border-4 border-grayBlue hover:border-royalBlue py-2 px-8 rounded-2xl ${hoveredProject?.id === project.id
+                  className={`w-full h-32 lg:h-min text-center lg:text-left text-nowrap text-4xl md:text-5xl lg:text-8xl font-instrument italic transition-colors transition-discrete duration-300 border-4 border-grayBlue hover:border-royalBlue py-2 px-8 rounded-2xl ${hoveredProject?.id === project.id
                       ? "text-royalBlue "
                       : "text-grayBlue"
                     }`}
