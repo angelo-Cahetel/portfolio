@@ -96,18 +96,14 @@ function Header() {
               </ul>
             </div>
 
-            <button
-              type="button"
-              onClick={handleNavigate(0)}
-              className="text-left cursor-pointer"
-            >
+            <div className="text-left">
               <h1 className="text-royalBlue  text-4xl lg:text-8xl uppercase font-medium font-instrument italic">
                 <span class="text">Angelo</span>
               </h1>
               <h1 className="text-royalBlue  text-4xl lg:text-8xl uppercase font-medium font-instrument italic">
                 <span class="text">Mendes</span>
               </h1>
-            </button>
+            </div>
           </div>
         </div>
       </div>
